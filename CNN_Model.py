@@ -6,7 +6,6 @@ train_images, test_images = train_images / 255.0, test_images / 255.0
 
 
 model = models.Sequential([
-    # Layer 1: Find basic edges & colors
     layers.Conv2D(32, (3, 3), activation='relu', padding='same', input_shape=(32, 32, 3)),
     layers.BatchNormalization(),
     layers.MaxPooling2D((2, 2)),
